@@ -1,26 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import {
+  Container, Col, Form,
+  FormGroup, Label, Input,
+  Button,
+} from 'reactstrap';
 import './App.css';
+import Login from './Login';
+import Signup from "./Signup";
+import MenuBar from "./MenuBar";
+import DashBoard from "./DashBoard";
+import Explorer from "./Explorer";
+import Settings from "./Settings";
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+    <div>
+      <Router>
+        <MenuBar/>
+        <Container className="App">
+        
+        </Container>
+        <Route exact path="/" component={Login} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/signup"  component={Signup} />
+        <Route path="/dashboard" exact component={DashBoard} />
+        <Route path="/explore" exact component={Explorer} />
+        <Route path="/settings" exact component={Settings} />
+      </Router>
+    </div>
     );
   }
 }
