@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 const  ErrorBoundary = (props) => {
     let errorMsg;
     if (props.hasError) {
-        errorMsg =  <div class="alert alert-danger" role="alert">
+        errorMsg =  <div className="alert alert-danger" role="alert">
                       {props.msg}
                    </div>
     } else {
