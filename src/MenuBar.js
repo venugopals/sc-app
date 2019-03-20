@@ -45,7 +45,7 @@ class MenuBar extends Component {
                       <li className="nav-item">
                         <a className="nav-item nav-link" href="/settings">Settings</a>
                       </li>
-                      <li className="nav-item">
+                      <li className="nav-item logout">
                         <a className="nav-item nav-link float-right" href="/" onClick={this.Logout}>Logout</a>
                       </li>
                     </ul>

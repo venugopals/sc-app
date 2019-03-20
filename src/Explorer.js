@@ -63,10 +63,10 @@ class Explorer extends Component {
    setDashBoardData(imdbID, movieDetails){
      let dashBoardhash = {};
      let data = {}
-     data[imdbID] = {Title: movieDetails.Title,
-                        Year: movieDetails.Year,
+     data = {Title: movieDetails.Title,
+                    Year: movieDetails.Year,
                   imdbID: imdbID,
-                  Poster: movieDetails.Year,
+                  Poster: movieDetails.Poster,
                   imdbRating: movieDetails.imdbRating,
                   Ratings: movieDetails.Ratings
                 };

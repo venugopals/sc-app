@@ -8,7 +8,10 @@ import { ButtonToolbar, Modal } from 'react-bootstrap';
 
 const  MovieCard = (props) => {
     const cardWidth = {
-        width: '18rem' 
+      width: '18rem',
+      marginLeft:  "40px",
+      marginTop: "21px",
+      height: "95%"
     }
     let movieList;
   return(
