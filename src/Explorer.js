@@ -30,7 +30,7 @@ class Explorer extends Component {
   }
   
   componentDidMount() {
-    axios.get(`http://www.omdbapi.com/?s=one&page=1&apikey=f4377d6`)
+    axios.get(`http://www.omdbapi.com/?s=one&page=1&apikey=f4377d68`)
       .then(res => {
         const listData = res.data;
         this.setState({ Search:  res.data["Search"], errorMsg: " ", hasError: false});

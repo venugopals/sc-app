@@ -25,7 +25,7 @@ class DetailPage extends Component {
   }
   
   componentDidMount() {
-    axios.get(`http://www.omdbapi.com/?i=tt0073486&apikey=f4377d6`)
+    axios.get(`http://www.omdbapi.com/?i=tt0073486&apikey=f4377d68`)
       .then(res => {
         const listData = res.data;
         this.setState({ MovieDetails:  res.data, errorMsg: " ", hasError: false});
