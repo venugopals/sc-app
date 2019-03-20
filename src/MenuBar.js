@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import logo  from "./standard-logo.png";
 import "./App.css";
 
 
@@ -56,7 +56,7 @@ class MenuBar extends Component {
     }
    return(
       <nav className="navbar navbar-expand-lg navbar-light bg-lightblue ">
-      <a className="navbar-brand" href="#">Navbar</a>
+        <a className="" href="#"><span><img className="logoWidth" src={logo} alt="logo"/></span></a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" onClick={this.toggleMenuBar.bind(this)}>
         <span className="navbar-toggler-icon"></span>
       </button>

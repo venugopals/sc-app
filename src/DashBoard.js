@@ -5,6 +5,7 @@ import DashCard from "./DashCard";
 
 
 
+
 class DashBoard extends Component {
     constructor(props) {
         super(props);
@@ -50,7 +51,7 @@ class DashBoard extends Component {
     render() {
         let dashBoardData = this.state.dashBoardData
         return (
-      <React.Fragment> 
+      <React.Fragment>
           {this.getdashData(dashBoardData)}
         </React.Fragment>
         )

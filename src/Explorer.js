@@ -9,6 +9,7 @@ import ErrorBoundary from "./ErrorMsg";
 import DetailView from "./detailView";
 import { ButtonToolbar, Modal } from 'react-bootstrap';
 import MovieDetails from "./apiData/detailPage.json"
+import ListPagination from "./pagination";
 
 
 
@@ -23,17 +24,33 @@ class Explorer extends Component {
       hasError: false,
       errorMsg: "",
       modalShow: false,
-      MovieDetails: {}
+      MovieDetails: {},
+      selectedPage: 1
     };
     this.handleDetailModal = this.handleDetailModal.bind(this);
     this.modalClose = this.modalClose.bind(this);
   }
   
   componentDidMount() {
-    axios.get(`http://www.omdbapi.com/?s=one&page=1&apikey=f4377d68`)
+    let selectedPage = localStorage.getItem('selectedPage')
+    if(selectedPage == undefined){
+      selectedPage = 1
+      this.setState({selectedPage: selectedPage}) 
+    }
+    else{
+      this.setState({selectedPage: selectedPage})
+    }
+    axios.get(`http://www.omdbapi.com/?s=one&page=${selectedPage}&apikey=f4377d68`)
       .then(res => {
         const listData = res.data;
-        this.setState({ Search:  res.data["Search"], errorMsg: " ", hasError: false});
+        this.setState((state, props) => {
+          return {
+            Search: res.data["Search"],
+            errorMsg: " ",
+            hasError: false
+          };
+        });
+        //this.setState({ Search:  res.data["Search"], errorMsg: " ", hasError: false});
       }).catch((error) => {
         this.setState({Search: listData["Search"], errorMsg: error.response.data.Error+"<br/>But We are showing Catched Data", hasError: true})
       })
@@ -117,6 +134,7 @@ class Explorer extends Component {
                return null
              } 
         })};
+         <ListPagination selectedPage={this.state.selectedPage} history={this.props.history}/>
         </React.Fragment>
       )
     }

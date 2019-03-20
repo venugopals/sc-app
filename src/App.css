@@ -48,10 +48,15 @@
 .topAlign{
   margin-top: 13px;
 }
-
+.logoWidth{
+  width: 30%
+}
 @media only screen and (max-width: 1090px) {
   .logout{
     margin-left: 600px;
+  }
+  .logoWidth{
+    width: 30%
   }
 }
 
@@ -59,6 +64,20 @@
   .logout{
     margin-left: 680px;
   }
+  .logoWidth{
+    width: 48%
+  }
+}
+
+@media only screen and  (min-width: 1190px) and (max-width: 1600px)  {
+  .logoWidth{
+    width: 20%
+  }
+}
+
+.scPagination{
+  float: none; 
+  margin: 0 auto;
 }
 
 @keyframes App-logo-spin {
