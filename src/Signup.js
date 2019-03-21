@@ -51,6 +51,7 @@ export default class Signup extends Component {
     });
     localStorage.setItem("user", JSON.stringify(this.state.user));
     localStorage.setItem("is_authenticated", true)
+    window.location.pathname="/dashboard"
 
   }
 

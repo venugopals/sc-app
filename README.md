@@ -1,6 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+To install packages compulsory node and npm is required in locally
+To Install Node refer below link
+   ### `https://nodejs.org/en/download/`
+
+
+Install packges run this command
+### `npm install`
 
 In the project directory, you can run:
 
